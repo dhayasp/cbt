@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Auction Network</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Car Auction Network</h1>
+
+        <section>
+            <h2>Register a Car</h2>
+            <input type="text" id="make" placeholder="Make" />
+            <input type="text" id="model" placeholder="Model" />
+            <input type="number" id="year" placeholder="Year" />
+            <button id="registerCar">Register Car</button>
+        </section>
+
+        <section>
+            <h2>Start Auction</h2>
+            <input type="number" id="auctionCarId" placeholder="Car ID" />
+            <input type="number" id="minBid" placeholder="Minimum Bid (in Ether)" />
+            <button id="startAuction">Start Auction</button>
+        </section>
+
+        <section>
+            <h2>Place a Bid</h2>
+            <input type="number" id="bidCarId" placeholder="Car ID" />
+            <input type="number" id="bidAmount" placeholder="Bid Amount (in Ether)" />
+            <button id="placeBid">Place Bid</button>
+        </section>
+
+        <section>
+            <h2>End Auction</h2>
+            <input type="number" id="endCarId" placeholder="Car ID" />
+            <button id="endAuction">End Auction</button>
+        </section>
+
+        <section>
+            <h2>Auction Details</h2>
+            <input type="text" id="detailsCarId" placeholder="Enter Car ID" />
+            <button id="getDetails">Get Details</button>
+            <br>
+            <br>
+            <hr style="height: 2px ; background-color: black ;">
+            <br>
+            <button id="getAllDetails">Get All Cars and Auction Details in the Network</button>
+        </section>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <!-- Table for a single car's details -->
+        <table id="carAuctionDetailsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Car ID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Owner</th>
+                    <th>Seller</th>
+                    <th>Min Bid (ETH)</th>
+                    <th>Highest Bid (ETH)</th>
+                    <th>Highest Bidder</th>
+                    <th>Auction Ended</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <!-- Table for all cars' details -->
+        <table id="allCarAuctionDetailsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Car ID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Owner</th>
+                    <th>Seller</th>
+                    <th>Min Bid (ETH)</th>
+                    <th>Highest Bid (ETH)</th>
+                    <th>Highest Bidder</th>
+                    <th>Auction Ended</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
